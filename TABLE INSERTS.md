@@ -1,5 +1,5 @@
 # Inserts For Creating Tables
-
+--------------------------------
 
 ### Collectors:
 #### stores information about Funko Pop collectors

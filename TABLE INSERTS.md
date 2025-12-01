@@ -12,7 +12,7 @@ CREATE TABLE collectors (
     join_date DATE,
     total_collection_value DECIMAL(10,2) DEFAULT 0.00,
     INDEX idx_last_name (last_name)
-) ENGINE=InnoDB
+) ENGINE=InnoDB;
 ```
 
 ### Franchise:
@@ -21,7 +21,7 @@ CREATE TABLE collectors (
 CREATE TABLE franchises (
     franchise_id INT AUTO_INCREMENT PRIMARY KEY,
     franchise_name VARCHAR(100) NOT NULL
-) ENGINE=InnoDB
+) ENGINE=InnoDB;
 ```
 
 ### Funko Pops:
@@ -41,7 +41,7 @@ CREATE TABLE funko_pops (
     INDEX idx_rarity (rarity),
     INDEX idx_pop_name (pop_name),
     FOREIGN KEY (franchise_id) REFERENCES franchises(franchise_id)
-) ENGINE=InnoDB
+) ENGINE=InnoDB;
 ```
 ### Vault:
 #### Junction table linking collectors to their owned Funko Pops
@@ -59,7 +59,7 @@ CREATE TABLE vault (
     INDEX idx_purchase_date (purchase_date),
     FOREIGN KEY (collector_id) REFERENCES collectors(collector_id),
     FOREIGN KEY (pop_id) REFERENCES funko_pops(pop_id)
-) ENGINE=InnoDB
+) ENGINE=InnoDB;
 ```
 
 

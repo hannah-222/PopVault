@@ -1,6 +1,6 @@
 # POPVAULT
 
-## A new way of storing. 
+## A pocket vault for your Funko Pops
 
 
 
@@ -221,6 +221,7 @@ DROP TABLE funko_pops;
 DROP TABLE franchises;
 DROP TABLE collectors;
 ```
+
 
 
 

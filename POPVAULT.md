@@ -21,6 +21,50 @@
 
 ###### The real value shows during shopping trips. Collectors can quickly search for a specific pop on their phone to see if they already own it or if it's on their wishlist, solving the common problem of buying duplicates or forgetting what's at home. Users manage wishlists with priority levels (1-5) and generate reports showing their most valuable pieces, spending over time, or collection completion by franchise. PopVault puts a collector's entire inventory in their pocket, making informed purchasing decisions easy and eliminating the frustration of forgotten purchases.
 
+---
+## ER DIAGRAM:
+```mermaid
+erDiagram
+    collectors ||--o{ vault : "owns"
+    funko_pops ||--o{ vault : "included in"
+    franchises ||--o{ funko_pops : "contains"
+
+    collectors {
+        INT collector_id PK
+        VARCHAR first_name
+        VARCHAR last_name
+        VARCHAR email
+        DATE join_date
+        DECIMAL total_collection_value
+    }
+
+    franchises {
+        INT franchise_id PK
+        VARCHAR franchise_name
+    }
+
+    funko_pops {
+        INT pop_id PK
+        VARCHAR pop_name
+        VARCHAR pop_number
+        INT franchise_id FK
+        YEAR release_year
+        BOOLEAN is_exclusive
+        VARCHAR exclusive_retailer
+        ENUM rarity
+        DECIMAL estimated_value
+    }
+
+    vault {
+        INT collection_item_id PK
+        INT collector_id FK
+        INT pop_id FK
+        DATE purchase_date
+        DECIMAL purchase_price
+        ENUM pop_condition
+        VARCHAR storage_location
+    }
+```
 
 ### SQL Queries:
 
@@ -221,6 +265,7 @@ DROP TABLE funko_pops;
 DROP TABLE franchises;
 DROP TABLE collectors;
 ```
+
 
 
 

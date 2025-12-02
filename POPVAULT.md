@@ -66,8 +66,8 @@ erDiagram
     }
 ```
 
-### SQL Queries:
-
+## SQL Queries:
+---
 
 
 
@@ -265,6 +265,7 @@ DROP TABLE funko_pops;
 DROP TABLE franchises;
 DROP TABLE collectors;
 ```
+
 
 
 

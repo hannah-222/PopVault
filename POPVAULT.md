@@ -13,7 +13,7 @@
 
 
 
-#### User's perspective:
+### User's perspective:
 
 ###### When collectors join PopVault, they create a profile and build their digital inventory by adding Funko Pops with details like purchase date, price, condition, and storage location. Users can browse by franchise to see what they own and identify missing figures, while the system automatically calculates their total collection value. This organized catalog transforms hundreds of physical pops scattered across shelves and storage boxes into a searchable, manageable database.
 
@@ -265,6 +265,7 @@ DROP TABLE funko_pops;
 DROP TABLE franchises;
 DROP TABLE collectors;
 ```
+
 
 
 

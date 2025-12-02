@@ -19,7 +19,7 @@
 
 ###### 
 
-###### The real value shows during shopping trips. Collectors can quickly search for a specific pop on their phone to see if they already own it or if it's on their wishlist, solving the common problem of buying duplicates or forgetting what's at home. Users manage wishlists with priority levels (1-5) and generate reports showing their most valuable pieces, spending over time, or collection completion by franchise. PopVault puts a collector's entire inventory in their pocket, making informed purchasing decisions easy and eliminating the frustration of forgotten purchases.
+###### The real value shows during shopping trips. Collectors can quickly search for a specific pop on their phone to see if they already own it. Solving the common problem of buying duplicates or forgetting what's at home. Users manage their vault and can generate reports showing their most valuable pieces, spending over time, or collection completion by franchise. PopVault puts a collector's entire inventory in their pocket, making informed purchasing decisions easy and eliminating the frustration of forgotten purchases.
 
 ---
 ## ER DIAGRAM:
@@ -265,6 +265,7 @@ DROP TABLE funko_pops;
 DROP TABLE franchises;
 DROP TABLE collectors;
 ```
+
 
 
 

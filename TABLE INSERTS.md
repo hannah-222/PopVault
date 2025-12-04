@@ -29,12 +29,12 @@ CREATE TABLE franchises (
 ```sql
 CREATE TABLE funko_pops (
     pop_id INT AUTO_INCREMENT PRIMARY KEY,
-    pop_name VARCHAR(150) NOT NULL,
+    pop_name VARCHAR(50) NOT NULL,
     pop_number VARCHAR(20),
     franchise_id INT NOT NULL,
     release_year YEAR,
     is_exclusive BOOLEAN NOT NULL,
-    exclusive_retailer VARCHAR(100),
+    exclusive_retailer VARCHAR(70),
     rarity ENUM('Common', 'Uncommon', 'Rare', 'Chase', 'Grail') NOT NULL,
     estimated_value DECIMAL(8,2) NOT NULL,
     INDEX idx_franchise (franchise_id),

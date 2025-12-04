@@ -185,6 +185,15 @@ INSERT INTO funko_pops (pop_name, pop_number, franchise_id, release_year, is_exc
 ('Batman (Dark Knight)', '01', 13, 2012, FALSE, NULL, 'Rare', 125.00),
 ('Spider-Man (First Appearance)', '03', 1, 2011, TRUE, 'SDCC', 'Chase', 450.00);
 ```
+```sql
+INSERT INTO funko_pops 
+(pop_id, pop_name, pop_number, franchise_id, release_year, is_exclusive, exclusive_retailer, rarity, estimated_value) 
+VALUES
+(107, 'Iron Man (Nano Gauntlet)', '905', 1, 2022, TRUE, 'Target', 'Rare', 32.00),
+(115, 'Captain America (Battle Damaged)', '914', 1, 2022, FALSE, NULL, 'Common', 15.00),
+(116, 'Spider-Man (Symbiote Suit)', '869', 1, 2021, TRUE, 'Hot Topic', 'Chase', 45.00),
+(120, 'Doctor Strange (Multiverse Portal)', '1027', 1, 2022, FALSE, NULL, 'Uncommon', 22.00);
+
 ---
 ## Inserts For Vault:
 ---

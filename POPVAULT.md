@@ -83,17 +83,38 @@ JOIN franchises f ON fp.franchise_id = f.franchise_id
 ORDER BY f.franchise_name, fp.rarity DESC, fp.estimated_value DESC
 LIMIT 15;
 ```
-
-
+```code
++-------------------------+-----------------+----------+-----------------+
+| pop_name                | franchise_name  | rarity   | estimated_value |
++-------------------------+-----------------+----------+-----------------+
+| Levi Ackerman           | Attack on Titan | Rare     |           95.00 |
+| Eren Yeager             | Attack on Titan | Rare     |           85.00 |
+| Mikasa Ackerman         | Attack on Titan | Rare     |           78.00 |
+| Colossal Titan (6 inch) | Attack on Titan | Uncommon |           38.00 |
+| Armin Arlert            | Attack on Titan | Uncommon |           32.00 |
+| Erwin Smith             | Attack on Titan | Uncommon |           28.00 |
+| Annie Leonhart          | Attack on Titan | Common   |           18.00 |
+| Hange Zoe               | Attack on Titan | Common   |           16.00 |
+| Batman (Dark Knight)    | Batman          | Rare     |          125.00 |
+| The Joker               | DC Comics       | Grail    |          610.00 |
+| Batman                  | DC Comics       | Grail    |          580.00 |
+| Superman                | DC Comics       | Grail    |          520.00 |
+| Wonder Woman            | DC Comics       | Grail    |          490.00 |
+| Robin                   | DC Comics       | Rare     |           82.00 |
+| Green Lantern           | DC Comics       | Rare     |           75.00 |
++-------------------------+-----------------+----------+-----------------+
+```
+----
 
 2.SELECT using a calculated field with meaningful column heading
 
-&nbsp;This query calculates how many years ago each Funko Pop was released by subtracting the release year from the current year (2024). This helps collectors quickly identify vintage pops versus newer releases, which is useful since older pops often have higher collectible value.
+&nbsp;This query calculates how many years ago each Funko Pop was released by subtracting the release year from the current year. This helps collectors quickly identify vintage pops versus newer releases, which is useful since older pops often have higher collectible value.
 
 ```sql
-SELECT pop_name,
-       release_year,
-       (2025 - release_year) AS years_old
+SELECT
+pop_name,
+release_year,(2025-release_year)
+AS years_old
 FROM funko_pops
 ORDER BY years_old DESC
 LIMIT 10;
@@ -265,6 +286,7 @@ DROP TABLE funko_pops;
 DROP TABLE franchises;
 DROP TABLE collectors;
 ```
+
 
 
 

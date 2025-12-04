@@ -53,7 +53,7 @@ CREATE TABLE vault (
     purchase_date DATE,
     purchase_price DECIMAL(8,2),
     pop_condition ENUM('Mint', 'Near Mint', 'Good', 'Fair', 'Out of Box') DEFAULT 'Mint',
-    storage_location VARCHAR(100),
+    storage_location VARCHAR(60),
     INDEX idx_collector (collector_id),
     INDEX idx_pop (pop_id),
     INDEX idx_purchase_date (purchase_date),

@@ -119,6 +119,23 @@ FROM funko_pops
 ORDER BY years_old DESC
 LIMIT 10;
 ```
+```code
++-------------------------------+--------------+-----------+
+| pop_name                      | release_year | years_old |
++-------------------------------+--------------+-----------+
+| Batman                        |         2010 |        15 |
+| Superman                      |         2010 |        15 |
+| Wonder Woman                  |         2010 |        15 |
+| The Joker                     |         2010 |        15 |
+| Captain America               |         2011 |        14 |
+| Green Lantern                 |         2011 |        14 |
+| Spider-Man (First Appearance) |         2011 |        14 |
+| Hulk (Glow)                   |         2012 |        13 |
+| Batman (Dark Knight)          |         2012 |        13 |
+| Jon Snow                      |         2013 |        12 |
++-------------------------------+--------------+-----------+
+```
+---
 
 
 
@@ -128,13 +145,43 @@ This query uses the UPPER() function to display all collector names in uppercase
 
 ```sql
 --sql
-SELECT UPPER(first_name) AS first_name_upper,
-       UPPER(last_name) AS last_name_upper,
-       email
-FROM collectors
-LIMIT 10;
+SELECT UPPER(first_name) AS first,
+       UPPER(last_name) AS last,
+       email
+FROM collectors;
 ```
-
+```code
++---------+----------+---------------------+
+| first   | last     | email               |
++---------+----------+---------------------+
+| DEBBIE  | GRAYSON  | dgrayson@gmail.com  |
+| NOLAN   | GRAYSON  | ngrayson@gmai.com   |
+| MARK    | GRAYSON  | mgrayson@gmail.com  |
+| CLARK   | KENT     | ckent@gmail.com     |
+| BILLY   | BUTCHER  | bbutcher@gmail.com  |
+| BARRY   | ALLEN    | ballen@gmail.com    |
+| BRUCE   | WAYNE    | bwayne@gmail.com    |
+| TONY    | STARK    | tstark@gmail.com    |
+| STEVE   | ROGERS   | srogers@gmail.com   |
+| BUCKY   | BARNES   | bbarnes@gmail.com   |
+| ELPHABA | THROPP   | ethropp@gmail.com   |
+| GLINDA  | UPLAND   | gupland@gmail.com   |
+| PETER   | PARKER   | pparker@gmail.com   |
+| GWEN    | STACY    | gstacy@gmail.com    |
+| JOEL    | MILLER   | jmiller@gmail.com   |
+| ELLIE   | WILLIAMS | ewilliams@gmail.com |
+| ABBY    | ANDERSON | aanderson@gmail.com |
+| ARTHUR  | MORGAN   | amorgan@gmail.com   |
+| PETER   | GRIFFIN  | pgriffin@gmail.com  |
+| RICK    | SANCHEZ  | rsanchez@gmail.com  |
+| VANILLA | MACE     | vmace@gmail.com     |
+| STAMPY  | CAT      | scat@gmail.com      |
+| DEXTER  | MORGAN   | dmorgan@gmail.com   |
+| OLIVER  | GRAYSON  | ograyson@gmail.com  |
+| MORTY   | SMITH    | msmith@gmail.com    |
++---------+----------+---------------------+
+```
+---
 
 
 4\. SELECT with aggregation plus GROUP BY and HAVING
@@ -143,14 +190,22 @@ This query counts how many Funko Pops exist in each rarity category and only sho
 
 ```sql
 SELECT rarity,
-       COUNT(*) AS pop_count
+       COUNT(*) AS pop_count
 FROM funko_pops
 GROUP BY rarity
 HAVING COUNT(*) > 10
 ORDER BY pop_count DESC;
 ```
-
-
+```code
++----------+-----------+
+| rarity   | pop_count |
++----------+-----------+
+| Common   |        50 |
+| Uncommon |        33 |
+| Rare     |        18 |
++----------+-----------+
+```
+---
 
 5\. JOIN of THREE or more tables 
 
@@ -158,19 +213,31 @@ This query joins collectors, vault, funko\_pops, and franchises to show a comple
 
 ```sql
 SELECT c.first_name, c.last_name,
-       f.franchise_name,
-       fp.pop_name,
-       v.pop_condition,
-       v.storage_location,
-       v.purchase_price
+       f.franchise_name,
+       fp.pop_name,
+       v.pop_condition,
+       v.storage_location,
+       v.purchase_price
 FROM vault v
 JOIN collectors c ON v.collector_id = c.collector_id
 JOIN funko_pops fp ON v.pop_id = fp.pop_id
 JOIN franchises f ON fp.franchise_id = f.franchise_id
 WHERE c.collector_id = 7
 ORDER BY f.franchise_name, fp.pop_name
-LIMIT 10;
+LIMIT 15;
 ```
+```code
++------------+-----------+----------------+----------------+---------------+------------------+----------------+
+| first_name | last_name | franchise_name | pop_name       | pop_condition | storage_location | purchase_price |
++------------+-----------+----------------+----------------+---------------+------------------+----------------+
+| Bruce      | Wayne     | Naruto         | Itachi Uchiha  | Mint          | HP Collection    |          25.00 |
+| Bruce      | Wayne     | Naruto         | Jiraiya        | Mint          | HP Collection    |          32.00 |
+| Bruce      | Wayne     | Naruto         | Kakashi Hatake | Mint          | HP Collection    |          28.00 |
+| Bruce      | Wayne     | Naruto         | Pain           | Mint          | HP Collection    |          30.00 |
+| Bruce      | Wayne     | Naruto         | Sakura Haruno  | Near Mint     | HP Collection    |          55.00 |
++------------+-----------+----------------+----------------+---------------+------------------+----------------+
+```
+---
 
 
 
@@ -180,13 +247,43 @@ This LEFT JOIN query shows all franchises and how many Funko Pops exist in the d
 
 ```sql
 SELECT f.franchise_name,
-       COUNT(fp.pop_id) AS total_pops
+       COUNT(fp.pop_id) AS total_pops
 FROM franchises f
 LEFT JOIN funko_pops fp ON f.franchise_id = fp.franchise_id
 GROUP BY f.franchise_id, f.franchise_name
 ORDER BY total_pops DESC;
 ```
-
+```code
++---------------------------+------------+
+| franchise_name            | total_pops |
++---------------------------+------------+
+| Marvel Cinematic Universe |         20 |
+| Game of Thrones           |         15 |
+| Naruto                    |         12 |
+| Jujutsu Kaisen            |         10 |
+| Disney Princesses         |         10 |
+| DC Comics                 |         10 |
+| Attack on Titan           |          8 |
+| The Witcher               |          8 |
+| Stranger Things           |          7 |
+| Overwatch                 |          6 |
+| Fortnite                  |          2 |
+| My Hero Academia          |          1 |
+| Batman                    |          1 |
+| Toy Story                 |          0 |
+| Minecraft                 |          0 |
+| Demon Slayer              |          0 |
+| The Avengers              |          0 |
+| Spider-Man                |          0 |
+| WWE                       |          0 |
+| Breaking Bad              |          0 |
+| The Mandalorian           |          0 |
+| Rick and Morty            |          0 |
+| Frozen                    |          0 |
+| Friends                   |          0 |
++---------------------------+------------+
+```
+---
 
 
 
@@ -225,11 +322,11 @@ AND purchase_price < 20;
 ```sql
 CREATE VIEW collection_summary AS
 SELECT c.collector_id,
-       c.first_name,
-       c.last_name,
-       COUNT(v.vault_id) AS total_pops,
-       SUM(v.purchase_price) AS total_invested,
-       AVG(v.purchase_price) AS avg_pop_price
+       c.first_name,
+       c.last_name,
+       COUNT(v.vault_id) AS total_pops,
+       SUM(v.purchase_price) AS total_invested,
+       AVG(v.purchase_price) AS avg_pop_price
 FROM collectors c
 LEFT JOIN vault v ON c.collector_id = v.collector_id
 GROUP BY c.collector_id, c.first_name, c.last_name;
@@ -241,7 +338,23 @@ WHERE total_pops > 0
 ORDER BY total_invested DESC
 LIMIT 10;
 ```
-
+```code
++--------------+------------+-----------+------------+----------------+---------------+
+| collector_id | first_name | last_name | total_pops | total_invested | avg_pop_price |
++--------------+------------+-----------+------------+----------------+---------------+
+|           14 | Gwen       | Stacy     |          5 |        2540.00 |    508.000000 |
+|            3 | Mark       | Grayson   |          5 |        1608.00 |    321.600000 |
+|            6 | Barry      | Allen     |          5 |        1600.00 |    320.000000 |
+|            1 | Debbie     | Grayson   |          5 |        1396.99 |    279.398000 |
+|           16 | Ellie      | Williams  |          5 |        1231.00 |    246.200000 |
+|           17 | Abby       | Anderson  |          5 |        1188.00 |    237.600000 |
+|           12 | Glinda     | Upland    |          5 |        1165.50 |    233.100000 |
+|           15 | Joel       | Miller    |          5 |         592.50 |    118.500000 |
+|            5 | Billy      | Butcher   |          5 |         271.00 |     54.200000 |
+|            7 | Bruce      | Wayne     |          5 |         170.00 |     34.000000 |
++--------------+------------+-----------+------------+----------------+---------------+
+```
+---
 
 
 10\. Create a Transaction with ROLLBACK or COMMIT
@@ -286,6 +399,7 @@ DROP TABLE funko_pops;
 DROP TABLE franchises;
 DROP TABLE collectors;
 ```
+
 
 
 

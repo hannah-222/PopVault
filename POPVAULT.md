@@ -391,7 +391,6 @@ COMMIT;
 
 #### Delete Tables:
 MUST DO IN ORDER
-(may need to do one query at a time)
 ```sql
 DROP VIEW collection_summary;
 DROP TABLE vault;
@@ -399,6 +398,7 @@ DROP TABLE funko_pops;
 DROP TABLE franchises;
 DROP TABLE collectors;
 ```
+
 
 
 

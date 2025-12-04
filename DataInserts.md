@@ -91,7 +91,7 @@ INSERT INTO funko_pops (pop_name, pop_number, franchise_id, release_year, is_exc
 ('White Walker', '06', 11, 2013, FALSE, NULL, 'Uncommon', 42.00),
 ('Brienne of Tarth', '13', 11, 2014, FALSE, NULL, 'Uncommon', 28.00),
 ('Khal Drogo', '04', 11, 2013, FALSE, NULL, 'Rare', 72.00),
-('Ned Stark (Headless)', '02', 11, 2013, TRUE, 'SDCC', 'Grail', 520.00)
+('Ned Stark (Headless)', '02', 11, 2013, TRUE, 'SDCC', 'Grail', 520.00);
 ```
 ---
 ```sql

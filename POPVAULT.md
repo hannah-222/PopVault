@@ -66,13 +66,13 @@ erDiagram
     }
 ```
 
-## SQL Queries:
+### SQL Queries:
 ---
 
 
 
 
-1. SELECT using ORDER BY two or more columns
+## 1. SELECT using ORDER BY two or more columns
 
 Retrieves all Funko Pops ordered first by franchise (grouped together), then by rarity level within each franchise, and finally by estimated value. This is useful when browsing the entire catalog organized by franchise and value, helping collectors identify the most valuable pops within each franchise.
 
@@ -106,7 +106,7 @@ LIMIT 15;
 ```
 ----
 
-2.SELECT using a calculated field with meaningful column heading
+## 2.SELECT using a calculated field with meaningful column heading
 
 &nbsp;This query calculates how many years ago each Funko Pop was released by subtracting the release year from the current year. This helps collectors quickly identify vintage pops versus newer releases, which is useful since older pops often have higher collectible value.
 
@@ -139,7 +139,7 @@ LIMIT 10;
 
 
 
-3\.  SELECT using a MariaDB function
+## 3\.  SELECT using a MariaDB function
 
 This query uses the UPPER() function to display all collector names in uppercase letters. This is useful for generating mailing labels, creating standardized reports, or ensuring consistent formatting when exporting data to other systems.
 
@@ -184,7 +184,7 @@ FROM collectors;
 ---
 
 
-4\. SELECT with aggregation plus GROUP BY and HAVING
+## 4\. SELECT with aggregation plus GROUP BY and HAVING
 
 This query counts how many Funko Pops exist in each rarity category and only shows rarity levels that have more than 10 pops. This helps collectors understand which rarity levels are most common in the database and identify which categories have substantial inventory.
 
@@ -207,7 +207,7 @@ ORDER BY pop_count DESC;
 ```
 ---
 
-5\. JOIN of THREE or more tables 
+## 5\. JOIN of THREE or more tables 
 
 This query joins collectors, vault, funko\_pops, and franchises to show a complete view of who owns which pops from which franchises, including condition and storage details. This comprehensive report is useful for generating inventory reports or understanding the full context of a collection across multiple data dimensions.
 
@@ -241,7 +241,7 @@ LIMIT 15;
 
 
 
-6\. Left or Right JOIN
+## 6\. Left or Right JOIN
 
 This LEFT JOIN query shows all franchises and how many Funko Pops exist in the database for each franchise, including franchises that don't have any pops yet (showing 0). This is useful for identifying which franchises need more pops added to the catalog or which franchises are underrepresented.
 
@@ -287,7 +287,7 @@ ORDER BY total_pops DESC;
 
 
 
-7\. Update Query
+## 7\. Update Query
 
 This UPDATE query changes the storage location for all pops currently stored in "Basement Box 3" to "Storage Unit A". This would be used when physically reorganizing a collection, such as moving items from home storage to a rented storage unit, ensuring the database reflects the actual physical location.
 
@@ -304,7 +304,7 @@ SELECT * FROM vault WHERE storage_location = 'Storage Unit A';
 
 
 
-8\. Delete Query
+## 8\. Delete Query
 
 This DELETE query removes all vault entries where the pop is in "Fair" condition and was purchased for less than $20. This could be used when decluttering a collection by removing low-value damaged items, or when a collector decides to only keep high-quality pieces in their database.
 
@@ -315,7 +315,7 @@ AND purchase_price < 20;
 ```
 
 
-9\. Create a View and demonstrate using it
+## 9\. Create a View and demonstrate using it
 
 &nbsp;This view creates a virtual table showing each collector's collection summary statistics including total pops owned, total money spent, and average price per pop. Views are useful for simplifying complex queries that are run frequently, and this particular view helps quickly assess collection size and investment levels without writing the full query each time.
 
@@ -331,7 +331,7 @@ FROM collectors c
 LEFT JOIN vault v ON c.collector_id = v.collector_id
 GROUP BY c.collector_id, c.first_name, c.last_name;
 ```
-To view:
+### To view:
 ```sql
 SELECT * FROM collection_summary
 WHERE total_pops > 0
@@ -357,7 +357,7 @@ LIMIT 10;
 ---
 
 
-10\. Create a Transaction with ROLLBACK or COMMIT
+## 10\. Create a Transaction with ROLLBACK or COMMIT
 
 This transaction demonstrates adding a new Funko Pop purchase to the vault and updating the collector's total collection value atomically. If any part fails (like insufficient funds or invalid data), the ROLLBACK ensures the database stays consistent. The COMMIT saves all changes permanently only if everything works. 
 
@@ -389,8 +389,7 @@ COMMIT;
 
 
 
-#### Delete Tables:
-MUST DO IN ORDER
+## Delete Tables:
 ```sql
 DROP VIEW collection_summary;
 DROP TABLE vault;
@@ -398,6 +397,7 @@ DROP TABLE funko_pops;
 DROP TABLE franchises;
 DROP TABLE collectors;
 ```
+
 
 
 

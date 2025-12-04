@@ -91,7 +91,11 @@ INSERT INTO funko_pops (pop_name, pop_number, franchise_id, release_year, is_exc
 ('White Walker', '06', 11, 2013, FALSE, NULL, 'Uncommon', 42.00),
 ('Brienne of Tarth', '13', 11, 2014, FALSE, NULL, 'Uncommon', 28.00),
 ('Khal Drogo', '04', 11, 2013, FALSE, NULL, 'Rare', 72.00),
-('Ned Stark (Headless)', '02', 11, 2013, TRUE, 'SDCC', 'Grail', 520.00),
+('Ned Stark (Headless)', '02', 11, 2013, TRUE, 'SDCC', 'Grail', 520.00)
+```
+---
+```sql
+INSERT INTO funko_pops (pop_name, pop_number, franchise_id, release_year, is_exclusive, exclusive_retailer, rarity, estimated_value) VALUES
 ('Elsa', '581', 3, 2019, FALSE, NULL, 'Common', 11.00),
 ('Anna', '582', 3, 2019, FALSE, NULL, 'Common', 11.00),
 ('Cinderella', '738', 3, 2020, FALSE, NULL, 'Common', 10.50),
@@ -113,7 +117,11 @@ INSERT INTO funko_pops (pop_name, pop_number, franchise_id, release_year, is_exc
 ('Rock Lee', '739', 18, 2020, FALSE, NULL, 'Common', 12.00),
 ('Minato Namikaze', '820', 18, 2021, FALSE, NULL, 'Uncommon', 19.00),
 ('Madara Uchiha', '823', 18, 2021, FALSE, NULL, 'Uncommon', 20.00),
-('Hinata Hyuga', '888', 18, 2021, FALSE, NULL, 'Common', 11.00),
+('Hinata Hyuga', '888', 18, 2021, FALSE, NULL, 'Common', 11.00);
+```
+---
+```sql
+INSERT INTO funko_pops (pop_name, pop_number, franchise_id, release_year, is_exclusive, exclusive_retailer, rarity, estimated_value) VALUES
 ('Batman', '01', 5, 2010, FALSE, NULL, 'Grail', 580.00),
 ('Superman', '07', 5, 2010, FALSE, NULL, 'Grail', 520.00),
 ('Wonder Woman', '08', 5, 2010, FALSE, NULL, 'Grail', 490.00),
@@ -133,7 +141,11 @@ INSERT INTO funko_pops (pop_name, pop_number, franchise_id, release_year, is_exc
 ('Maki Zenin', '1117', 24, 2022, FALSE, NULL, 'Common', 13.00),
 ('Panda', '1118', 24, 2022, FALSE, NULL, 'Common', 11.00),
 ('Mahito', '1119', 24, 2022, FALSE, NULL, 'Common', 12.00),
-('Gojo (Blindfold)', '1120', 24, 2022, TRUE, 'Hot Topic', 'Rare', 35.00),
+('Gojo (Blindfold)', '1120', 24, 2022, TRUE, 'Hot Topic', 'Rare', 35.00);
+```
+---
+```sql
+INSERT INTO funko_pops (pop_name, pop_number, franchise_id, release_year, is_exclusive, exclusive_retailer, rarity, estimated_value) VALUES
 ('Eren Yeager', '22', 7, 2014, FALSE, NULL, 'Rare', 85.00),
 ('Mikasa Ackerman', '23', 7, 2014, FALSE, NULL, 'Rare', 78.00),
 ('Armin Arlert', '24', 7, 2014, FALSE, NULL, 'Uncommon', 32.00),
@@ -156,14 +168,11 @@ INSERT INTO funko_pops (pop_name, pop_number, franchise_id, release_year, is_exc
 ('Lucas Sinclair', '425', 9, 2017, FALSE, NULL, 'Common', 14.00),
 ('Will Byers', '426', 9, 2017, FALSE, NULL, 'Common', 13.00),
 ('Joyce Byers', '436', 9, 2017, FALSE, NULL, 'Common', 16.00),
-('Demogorgon', '428', 9, 2017, FALSE, NULL, 'Uncommon', 22.00),
-('Woody', '168', 16, 2015, FALSE, NULL, 'Common', 14.00),
-('Buzz Lightyear', '169', 16, 2015, FALSE, NULL, 'Common', 14.00),
-('Jessie', '170', 16, 2015, FALSE, NULL, 'Common', 15.00),
-('Rex', '171', 16, 2015, FALSE, NULL, 'Common', 13.00),
-('Hamm', '172', 16, 2015, FALSE, NULL, 'Common', 12.00),
-('Slinky Dog', '516', 16, 2019, FALSE, NULL, 'Common', 11.00),
-('Bo Peep', '517', 16, 2019, FALSE, NULL, 'Common', 12.00),
+('Demogorgon', '428', 9, 2017, FALSE, NULL, 'Uncommon', 22.00);
+```
+---
+```sql
+INSERT INTO funko_pops (pop_name, pop_number, franchise_id, release_year, is_exclusive, exclusive_retailer, rarity, estimated_value) VALUES
 ('Naruto Uzumaki', '71', 18, 2015, FALSE, NULL, 'Uncommon', 28.00),
 ('Sasuke Uchiha', '72', 18, 2015, FALSE, NULL, 'Uncommon', 26.00),
 ('Sakura Haruno', '183', 18, 2016, FALSE, NULL, 'Common', 16.00),

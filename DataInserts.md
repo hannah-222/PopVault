@@ -77,21 +77,21 @@ INSERT INTO funko_pops (pop_name, pop_number, franchise_id, release_year, is_exc
 ('Ant-Man', '85', 1, 2015, FALSE, NULL, 'Common', 14.50),
 ('Captain Marvel', '425', 1, 2019, FALSE, NULL, 'Common', 12.00),
 ('Winter Soldier', '129', 1, 2014, FALSE, NULL, 'Uncommon', 28.00),
-('Jon Snow', '07', 11, 2013, FALSE, NULL, 'Rare', 85.00),
-('Daenerys Targaryen', '03', 11, 2013, FALSE, NULL, 'Rare', 95.00),
-('Tyrion Lannister', '01', 11, 2013, FALSE, NULL, 'Rare', 88.00),
-('Arya Stark', '09', 11, 2014, FALSE, NULL, 'Uncommon', 35.00),
-('Cersei Lannister', '11', 11, 2014, FALSE, NULL, 'Uncommon', 32.00),
-('Jamie Lannister', '10', 11, 2014, FALSE, NULL, 'Uncommon', 30.00),
-('The Night King', '44', 11, 2017, FALSE, NULL, 'Common', 15.00),
-('Ghost (Flocked)', '19', 11, 2014, TRUE, 'Hot Topic', 'Rare', 65.00),
-('Drogon (6 inch)', '46', 11, 2017, FALSE, NULL, 'Uncommon', 28.00),
-('Sansa Stark', '28', 11, 2016, FALSE, NULL, 'Common', 18.00),
-('The Hound', '05', 11, 2013, FALSE, NULL, 'Uncommon', 38.00),
-('White Walker', '06', 11, 2013, FALSE, NULL, 'Uncommon', 42.00),
-('Brienne of Tarth', '13', 11, 2014, FALSE, NULL, 'Uncommon', 28.00),
-('Khal Drogo', '04', 11, 2013, FALSE, NULL, 'Rare', 72.00),
-('Ned Stark (Headless)', '02', 11, 2013, TRUE, 'SDCC', 'Grail', 520.00);
+('Jon Snow', '07', 2, 2013, FALSE, NULL, 'Rare', 85.00),
+('Daenerys Targaryen', '03', 2, 2013, FALSE, NULL, 'Rare', 95.00),
+('Tyrion Lannister', '01', 2, 2013, FALSE, NULL, 'Rare', 88.00),
+('Arya Stark', '09', 2, 2014, FALSE, NULL, 'Uncommon', 35.00),
+('Cersei Lannister', '11', 2, 2014, FALSE, NULL, 'Uncommon', 32.00),
+('Jamie Lannister', '10', 2, 2014, FALSE, NULL, 'Uncommon', 30.00),
+('The Night King', '44', 2, 2017, FALSE, NULL, 'Common', 15.00),
+('Ghost (Flocked)', '19', 2, 2014, TRUE, 'Hot Topic', 'Rare', 65.00),
+('Drogon (6 inch)', '46', 2, 2017, FALSE, NULL, 'Uncommon', 28.00),
+('Sansa Stark', '28', 2, 2016, FALSE, NULL, 'Common', 18.00),
+('The Hound', '05', 2, 2013, FALSE, NULL, 'Uncommon', 38.00),
+('White Walker', '06', 2, 2013, FALSE, NULL, 'Uncommon', 42.00),
+('Brienne of Tarth', '13', 2, 2014, FALSE, NULL, 'Uncommon', 28.00),
+('Khal Drogo', '04', 2, 2013, FALSE, NULL, 'Rare', 72.00),
+('Ned Stark (Headless)', '02', 2, 2013, TRUE, 'SDCC', 'Grail', 520.00);
 ```
 ---
 ```sql
@@ -106,18 +106,18 @@ INSERT INTO funko_pops (pop_name, pop_number, franchise_id, release_year, is_exc
 ('Rapunzel', '223', 3, 2016, FALSE, NULL, 'Common', 14.00),
 ('Jasmine', '354', 3, 2017, FALSE, NULL, 'Common', 13.50),
 ('Moana', '213', 3, 2016, FALSE, NULL, 'Common', 15.00),
-('Naruto Uzumaki', '71', 18, 2015, FALSE, NULL, 'Uncommon', 28.00),
-('Sasuke Uchiha', '72', 18, 2015, FALSE, NULL, 'Uncommon', 26.00),
-('Sakura Haruno', '183', 18, 2016, FALSE, NULL, 'Common', 16.00),
-('Kakashi Hatake', '182', 18, 2016, FALSE, NULL, 'Uncommon', 22.00),
-('Itachi Uchiha', '578', 18, 2020, FALSE, NULL, 'Common', 14.00),
-('Jiraiya', '73', 18, 2015, FALSE, NULL, 'Uncommon', 24.00),
-('Pain', '934', 18, 2021, FALSE, NULL, 'Common', 13.00),
-('Gaara', '185', 18, 2016, FALSE, NULL, 'Common', 18.00),
-('Rock Lee', '739', 18, 2020, FALSE, NULL, 'Common', 12.00),
-('Minato Namikaze', '820', 18, 2021, FALSE, NULL, 'Uncommon', 19.00),
-('Madara Uchiha', '823', 18, 2021, FALSE, NULL, 'Uncommon', 20.00),
-('Hinata Hyuga', '888', 18, 2021, FALSE, NULL, 'Common', 11.00);
+('Naruto Uzumaki', '71', 4, 2015, FALSE, NULL, 'Uncommon', 28.00),
+('Sasuke Uchiha', '72', 4, 2015, FALSE, NULL, 'Uncommon', 26.00),
+('Sakura Haruno', '183', 4, 2016, FALSE, NULL, 'Common', 16.00),
+('Kakashi Hatake', '182', 4, 2016, FALSE, NULL, 'Uncommon', 22.00),
+('Itachi Uchiha', '578', 4, 2020, FALSE, NULL, 'Common', 14.00),
+('Jiraiya', '73', 4, 2015, FALSE, NULL, 'Uncommon', 24.00),
+('Pain', '934', 4, 2021, FALSE, NULL, 'Common', 13.00),
+('Gaara', '185', 4, 2016, FALSE, NULL, 'Common', 18.00),
+('Rock Lee', '739', 4, 2020, FALSE, NULL, 'Common', 12.00),
+('Minato Namikaze', '820', 4, 2021, FALSE, NULL, 'Uncommon', 19.00),
+('Madara Uchiha', '823', 4, 2021, FALSE, NULL, 'Uncommon', 20.00),
+('Hinata Hyuga', '888', 4, 2021, FALSE, NULL, 'Common', 11.00);
 ```
 ---
 ```sql
@@ -132,16 +132,16 @@ INSERT INTO funko_pops (pop_name, pop_number, franchise_id, release_year, is_exc
 ('Green Lantern', '09', 5, 2011, FALSE, NULL, 'Rare', 75.00),
 ('Cyborg', '95', 5, 2016, FALSE, NULL, 'Common', 12.00),
 ('Robin', '02', 5, 2013, FALSE, NULL, 'Rare', 82.00),
-('Yuji Itadori', '1111', 24, 2021, FALSE, NULL, 'Common', 14.00),
-('Megumi Fushiguro', '1112', 24, 2021, FALSE, NULL, 'Common', 14.00),
-('Nobara Kugisaki', '1113', 24, 2021, FALSE, NULL, 'Common', 13.00),
-('Satoru Gojo', '1114', 24, 2021, FALSE, NULL, 'Uncommon', 25.00),
-('Sukuna', '1115', 24, 2021, FALSE, NULL, 'Uncommon', 22.00),
-('Toge Inumaki', '1116', 24, 2022, FALSE, NULL, 'Common', 12.00),
-('Maki Zenin', '1117', 24, 2022, FALSE, NULL, 'Common', 13.00),
-('Panda', '1118', 24, 2022, FALSE, NULL, 'Common', 11.00),
-('Mahito', '1119', 24, 2022, FALSE, NULL, 'Common', 12.00),
-('Gojo (Blindfold)', '1120', 24, 2022, TRUE, 'Hot Topic', 'Rare', 35.00);
+('Yuji Itadori', '1111', 6, 2021, FALSE, NULL, 'Common', 14.00),
+('Megumi Fushiguro', '1112', 6, 2021, FALSE, NULL, 'Common', 14.00),
+('Nobara Kugisaki', '1113', 6, 2021, FALSE, NULL, 'Common', 13.00),
+('Satoru Gojo', '1114', 6, 2021, FALSE, NULL, 'Uncommon', 25.00),
+('Sukuna', '1115', 6, 2021, FALSE, NULL, 'Uncommon', 22.00),
+('Toge Inumaki', '1116', 6, 2022, FALSE, NULL, 'Common', 12.00),
+('Maki Zenin', '1117', 6, 2022, FALSE, NULL, 'Common', 13.00),
+('Panda', '1118', 6, 2022, FALSE, NULL, 'Common', 11.00),
+('Mahito', '1119', 6, 2022, FALSE, NULL, 'Common', 12.00),
+('Gojo (Blindfold)', '1120', 6, 2022, TRUE, 'Hot Topic', 'Rare', 35.00);
 ```
 ---
 ```sql
@@ -173,23 +173,17 @@ INSERT INTO funko_pops (pop_name, pop_number, franchise_id, release_year, is_exc
 ---
 ```sql
 INSERT INTO funko_pops (pop_name, pop_number, franchise_id, release_year, is_exclusive, exclusive_retailer, rarity, estimated_value) VALUES
-('Naruto Uzumaki', '71', 18, 2015, FALSE, NULL, 'Uncommon', 28.00),
-('Sasuke Uchiha', '72', 18, 2015, FALSE, NULL, 'Uncommon', 26.00),
-('Sakura Haruno', '183', 18, 2016, FALSE, NULL, 'Common', 16.00),
-('Kakashi Hatake', '182', 18, 2016, FALSE, NULL, 'Uncommon', 22.00),
-('Itachi Uchiha', '578', 18, 2020, FALSE, NULL, 'Common', 14.00),
-('Jiraiya', '73', 18, 2015, FALSE, NULL, 'Uncommon', 24.00),
-('Tracer', '92', 27, 2016, FALSE, NULL, 'Uncommon', 26.00),
-('Reaper', '93', 27, 2016, FALSE, NULL, 'Uncommon', 24.00),
-('Widowmaker', '94', 27, 2016, FALSE, NULL, 'Uncommon', 22.00),
-('D.Va with Meka', '177', 27, 2017, FALSE, NULL, 'Uncommon', 32.00),
-('Mercy', '304', 27, 2017, FALSE, NULL, 'Common', 16.00),
-('Genji', '347', 27, 2018, FALSE, NULL, 'Common', 18.00),
-('Fortnite Raptor', '436', 12, 2018, FALSE, NULL, 'Common', 13.00),
-('Fortnite Drift', '466', 12, 2019, FALSE, NULL, 'Common', 14.00),
-('My Hero Academia Deku', '247', 13, 2017, FALSE, NULL, 'Common', 15.00),
-('Batman (Dark Knight)', '01', 14, 2012, FALSE, NULL, 'Rare', 125.00),
-('Spider-Man (First Appearance)', '03', 15, 2011, TRUE, 'SDCC', 'Chase', 450.00);
+('Tracer', '92', 24, 2016, FALSE, NULL, 'Uncommon', 26.00),
+('Reaper', '93', 24, 2016, FALSE, NULL, 'Uncommon', 24.00),
+('Widowmaker', '94', 24, 2016, FALSE, NULL, 'Uncommon', 22.00),
+('D.Va with Meka', '177', 24, 2017, FALSE, NULL, 'Uncommon', 32.00),
+('Mercy', '304', 24, 2017, FALSE, NULL, 'Common', 16.00),
+('Genji', '347', 24, 2018, FALSE, NULL, 'Common', 18.00),
+('Fortnite Raptor', '436', 11, 2018, FALSE, NULL, 'Common', 13.00),
+('Fortnite Drift', '466', 11, 2019, FALSE, NULL, 'Common', 14.00),
+('My Hero Academia Deku', '247', 12, 2017, FALSE, NULL, 'Common', 15.00),
+('Batman (Dark Knight)', '01', 13, 2012, FALSE, NULL, 'Rare', 125.00),
+('Spider-Man (First Appearance)', '03', 1, 2011, TRUE, 'SDCC', 'Chase', 450.00);
 ```
 ---
 ## Inserts For Vault:

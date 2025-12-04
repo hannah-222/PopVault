@@ -193,7 +193,8 @@ VALUES
 (115, 'Captain America (Battle Damaged)', '914', 1, 2022, FALSE, NULL, 'Common', 15.00),
 (116, 'Spider-Man (Symbiote Suit)', '869', 1, 2021, TRUE, 'Hot Topic', 'Chase', 45.00),
 (120, 'Doctor Strange (Multiverse Portal)', '1027', 1, 2022, FALSE, NULL, 'Uncommon', 22.00);
-
+```
+---
 ---
 ## Inserts For Vault:
 ---

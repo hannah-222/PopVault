@@ -144,7 +144,6 @@ LIMIT 10;
 This query uses the UPPER() function to display all collector names in uppercase letters. This is useful for generating mailing labels, creating standardized reports, or ensuring consistent formatting when exporting data to other systems.
 
 ```sql
---sql
 SELECT UPPER(first_name) AS first,
        UPPER(last_name) AS last,
        email
@@ -397,6 +396,7 @@ DROP TABLE funko_pops;
 DROP TABLE franchises;
 DROP TABLE collectors;
 ```
+
 
 
 

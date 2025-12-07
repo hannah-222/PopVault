@@ -65,9 +65,30 @@ erDiagram
         VARCHAR storage_location
     }
 ```
-
-### SQL Queries:
 ---
+## DATA REPORT 
+
+
+<img width="779" height="316" alt="image" src="https://github.com/user-attachments/assets/71e3ffdf-771e-4b02-b6ba-0fd4c461737e" />
+
+### Summary: 
+The PopVault catalog contains 110 total Funko Pops distributed across five rarity categories. The majority of pops fall into the Common (50) and Uncommon (33) categories, representing 75% of the total inventory. Higher rarity items—Rare (18), Grail (7), and Chase (2) make up the remaining 25%, with Chase variants being the most exclusive at only 2 pops.
+
+### Casual Collectors:
+
+- Focus collecting efforts on Common/Uncommon pops (83 available) for budget-friendly options
+- Understand that 75% of the catalog is accessible without breaking the bank
+- Use this to set realistic collection goals based on affordability
+
+### Serious Collectors: 
+
+- Highlight that only 27 high-value pops exist (Rare/Grail/Chase combined)
+- Prioritize hunting for the 2 Chase variants and 7 Grails—these are the rarest investment pieces
+- Understand rarity: with only 18 Rare pops available, competition for these items will be high!!
+
+---
+# SQL Queries:
+
 
 
 
@@ -396,6 +417,7 @@ DROP TABLE funko_pops;
 DROP TABLE franchises;
 DROP TABLE collectors;
 ```
+
 
 
 

@@ -9,7 +9,7 @@
 ### DATABASE SUMMARY:
 
 
- PopVault is a database I created and designed for Funko Pop collectors of all levels, from casual fans to serious investors. The inspiration for PopVault came from a real collector's frustration. A friend of mine with 342 Funko Pops constantly faced the problem of buying duplicate figures or not buying a figure because he couldn't remember what he already owned. Walking into a comic store and seeing an interesting FunkoPop on the shelf, he would struggle to recall if it was already sitting in a box at home or displayed on one of his many shelves. I soon realized this highlighted the need for a portable, searchable database that collectors could reference anywhere, whether browsing online stores or walking the aisles of their local shop. PopVault solves this problem by putting a collector's entire inventory in their pocket, accessible anytime they need to make a purchasing decision. Just to clarify this dataset does not use any real personal information. estimated values and pricing are not 100% accurate to real world pricing.
+ PopVault is a database I created and designed for Funko Pop collectors of all levels, from casual fans to serious investors. The inspiration for PopVault came from a real collector's frustration. A friend of mine with 342 Funko Pops constantly faced the problem of buying duplicate figures or not buying a figure because he couldn't remember what he already owned. Walking into a comic store and seeing an interesting FunkoPop on the shelf, he would struggle to recall if it was already sitting in a box at home or displayed on one of his many shelves. I soon realized this highlighted the need for a portable, searchable database that collectors could reference anywhere, whether browsing online stores or walking the aisles of their local shop. PopVault solves this problem by putting a collector's entire inventory in their pocket, accessible anytime they need to make a purchasing decision. Just to clarify this dataset does not use any real personal information. Estimated values and pricing are not 100% accurate to real world pricing.
 
 
 
@@ -416,6 +416,7 @@ DROP TABLE funko_pops;
 DROP TABLE franchises;
 DROP TABLE collectors;
 ```
+
 
 
 
